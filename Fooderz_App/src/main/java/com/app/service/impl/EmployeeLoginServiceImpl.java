@@ -15,7 +15,15 @@ public class EmployeeLoginServiceImpl implements EmployeeLoginService {
 	@Override
 	public Employee employeeLogin(String employeeEmail, String employeePassword) {
 
+
 		return repository.findByEmployeeEmailAndEmployeePassword(employeeEmail, employeePassword);
+
+		Employee employee = repository.findByEmployeeEmailAndEmployeePassword(employeeEmail, employeePassword);
+		if (employee != null) {
+			return employee;
+		}
+		return null;
+
 	}
 
 }
