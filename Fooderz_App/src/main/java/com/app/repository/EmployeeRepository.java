@@ -9,4 +9,11 @@ import com.app.model.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 	Employee findByEmployeeEmailAndEmployeePassword(String employeeEmail, String employeePassword);
+
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+
+	Employee findByEmployeeEmailAndEmployeePassword(String employeeEmail, String employeePassword);
+
 }
