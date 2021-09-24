@@ -1,6 +1,8 @@
 package com.app.service;
 
+import com.app.model.Employee;
+
 public interface EmployeeLoginService {
 
-	public boolean employeeLogin(String employeeEmail, String employeePassword);
+	public Employee employeeLogin(String employeeEmail, String employeePassword);
 }
