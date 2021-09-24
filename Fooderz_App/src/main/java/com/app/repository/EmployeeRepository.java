@@ -1,10 +1,10 @@
-//package com.app.repository;
-//
-//import org.springframework.data.jpa.repository.JpaRepository;
-//
-//import com.app.model.Employee;
-//
-//public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
-//
-//	boolean existsByEmailAndPassword(String Email, String Password);
-//}
+package com.app.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.app.model.Employee;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+
+	boolean existsByEmailAndPassword(String Email, String Password);
+}
