@@ -17,7 +17,12 @@ public class CustomerLoginServiceImpl implements CustomerLoginService {
 	@Override
 	public Customer customerLogin(String userName, String password) {
 		// TODO Auto-generated method stub
-		return repository.findByUserNameAndPassword(userName, password);
+	
+		Customer customer=repository.findByUserNameAndPassword(userName, password);
+		if(customer !=null) {
+			return customer;
+		}
+		return null;
 	}
 
 }
