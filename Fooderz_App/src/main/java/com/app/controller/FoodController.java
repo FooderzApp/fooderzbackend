@@ -10,31 +10,32 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.model.Customer;
-import com.app.service.CustomerService;
+import com.app.model.Food;
+import com.app.service.FoodService;
 
 @RestController
-public class CustomerController {
+public class FoodController {
+
 	@Autowired
-	private CustomerService service;
-	
-	@PostMapping("/customer")
-	public Customer addCustomer( @RequestBody Customer customer) {
+	private FoodService service;
+
+	@PostMapping("/food")
+	public Food addFood(@RequestBody Food food) {
 		// TODO Auto-generated method stub
-		System.out.println(service.addCustomer(customer));
-		return service.addCustomer(customer) ;
+		return service.addFood(food);
 	}
 
-	@DeleteMapping("/customer/{id}")
-	public void deleteCustomer(@PathVariable int id) {
+	@DeleteMapping("/food/{id}")
+	public void deleteFood(@PathVariable int id) {
 		// TODO Auto-generated method stub
-		service.deleteCustomer(id);
+		service.deleteFood(id);
+
 	}
 
-	@GetMapping("/customer")
-	public List<Customer> getAllCustomers() {
+	@GetMapping("/food")
+	public List<Food> getAllFoods() {
 		// TODO Auto-generated method stub
-		return service.getAllCustomers();
+		return service.getAllFoods();
 	}
 
 }

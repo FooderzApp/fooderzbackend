@@ -3,6 +3,7 @@ package com.app.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.app.model.Employee;
 import com.app.repository.EmployeeRepository;
 import com.app.service.EmployeeLoginService;
 
@@ -12,9 +13,9 @@ public class EmployeeLoginServiceImpl implements EmployeeLoginService {
 	private EmployeeRepository repository;
 
 	@Override
-	public boolean employeeLogin(String employeeEmail, String employeePassword) {
+	public Employee employeeLogin(String employeeEmail, String employeePassword) {
 
-		return repository.existsByEmailAndPassword(employeeEmail, employeePassword);
+		return repository.findByEmployeeEmailAndEmployeePassword(employeeEmail, employeePassword);
 	}
 
 }
