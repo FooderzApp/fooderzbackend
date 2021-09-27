@@ -23,13 +23,17 @@ public class Food {
 	private int foodId;
 	private String foodName;
 	private double price;
+
 	@Lob
 	@Column(columnDefinition = "CLOB")
 	private String avatar;
 	
+
+
+
 	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "customerId",referencedColumnName = "customerId")
+	@JoinColumn(name = "customerId", referencedColumnName = "customerId")
 	private Customer customer;
-	
+
 }
