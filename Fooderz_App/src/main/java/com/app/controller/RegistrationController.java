@@ -20,12 +20,12 @@ public class RegistrationController {
 	@PostMapping("/register")
 	public Customer registerUser(@RequestBody Customer customer) throws Exception {
 		String userNameId = customer.getUserName();
-		if (userNameId != null && !"".equals(userNameId)) {
+		//if (userNameId != null && !"".equals(userNameId)) {
 			Customer cusobj = service.fetchCustomerByUsername(userNameId);
 			if (cusobj != null) {
 				throw new Exception("customer with " + userNameId + "is already exits");
 			}
-		}
+		//}
 		Customer cusObj = null;
 
 		cusObj = service.saveCustomer(customer);

@@ -16,7 +16,8 @@ import com.app.service.FoodService;
 
 @CrossOrigin
 @RestController
-public class FoodController {
+@CrossOrigin
+public class FoodController  {
 
 	@Autowired
 	private FoodService service;
@@ -38,6 +39,12 @@ public class FoodController {
 	public List<Food> getAllFoods() {
 		// TODO Auto-generated method stub
 		return service.getAllFoods();
+	}
+
+	@GetMapping("/food/{id}")
+	public Food getFoodById(@PathVariable int id) {
+		// TODO Auto-generated method stub
+		return service.getFoodById(id);
 	}
 
 }
