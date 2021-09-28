@@ -30,10 +30,10 @@ public class Food {
 	
 
 
-
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "customerId", referencedColumnName = "customerId")
-	private Customer customer;
+//
+//	@JsonIgnore
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@JoinColumn(name = "customerId", referencedColumnName = "customerId")
+//	private Customer customer;
 
 }

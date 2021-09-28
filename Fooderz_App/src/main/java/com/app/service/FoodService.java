@@ -9,6 +9,7 @@ public interface FoodService {
 		Food addFood(Food food);
 		void deleteFood(int id);
 		List<Food> getAllFoods();
+		Food getFoodById(int id);
 		
 	
 }

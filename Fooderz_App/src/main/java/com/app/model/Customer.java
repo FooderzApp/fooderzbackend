@@ -29,8 +29,8 @@ public class Customer {
 	private String password;
 	
 	
-	@OneToMany(cascade = CascadeType.ALL,mappedBy = "customer")
-	private List<Food> foodList;
+//	@OneToMany(cascade = CascadeType.ALL,mappedBy = "customer")
+//	private List<Food> foodList;
 	
 	
 }

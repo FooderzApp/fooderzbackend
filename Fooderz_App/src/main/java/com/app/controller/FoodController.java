@@ -3,6 +3,7 @@ package com.app.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +15,8 @@ import com.app.model.Food;
 import com.app.service.FoodService;
 
 @RestController
-public class FoodController {
+@CrossOrigin
+public class FoodController  {
 
 	@Autowired
 	private FoodService service;
@@ -36,6 +38,12 @@ public class FoodController {
 	public List<Food> getAllFoods() {
 		// TODO Auto-generated method stub
 		return service.getAllFoods();
+	}
+
+	@GetMapping("/food/{id}")
+	public Food getFoodById(@PathVariable int id) {
+		// TODO Auto-generated method stub
+		return service.getFoodById(id);
 	}
 
 }
