@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.model.Customer;
 import com.app.service.CustomerService;
 
+import io.swagger.annotations.Api;
+
+@Api(description = "Operaions for customer list")
 @CrossOrigin
 @RestController
 public class CustomerController {

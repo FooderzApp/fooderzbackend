@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.model.Food;
 import com.app.service.FoodService;
 
-@CrossOrigin
+import io.swagger.annotations.Api;
+
+@Api(description = "operation for the food model class")
 @RestController
 @CrossOrigin
-public class FoodController  {
+public class FoodController {
 
 	@Autowired
 	private FoodService service;

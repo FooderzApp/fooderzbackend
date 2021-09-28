@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.model.Employee;
 import com.app.service.EmployeeCRUDService;
 
+import io.swagger.annotations.Api;
+
+@Api(description = "CRUD operations for Employee in the Fooderz app")
 @CrossOrigin
 @RestController
 public class EmployeeCRUDController {
