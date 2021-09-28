@@ -1,14 +1,11 @@
 package com.app.model;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
@@ -17,21 +14,19 @@ import lombok.Data;
 public class Customer {
 	@Id
 	@GeneratedValue
+	@ApiModelProperty(notes = "this is the auto generated id for customer by the database ")
 	private int customerId;
+	@ApiModelProperty(notes = "this is for the customer first name")
 	private String firstName;
+	@ApiModelProperty(notes = "this is for the customer last name")
 	private String lastName;
+	@ApiModelProperty(notes = "this is for the customer email")
 	private String userName;
+	@ApiModelProperty(notes = "this is for the customer password")
 	private String password;
 
-	
-	
-//	@OneToMany(cascade = CascadeType.ALL,mappedBy = "customer")
+//	@ApiModelProperty(notes = "this is the relationship between customer and food model class")
+//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
 //	private List<Food> foodList;
-	
-	
-=======
-
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
-	private List<Food> foodList;
 
 }
