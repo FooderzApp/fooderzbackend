@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.model.Food;
 import com.app.service.FoodService;
 
+@CrossOrigin
 @RestController
 @CrossOrigin
 public class FoodController  {
