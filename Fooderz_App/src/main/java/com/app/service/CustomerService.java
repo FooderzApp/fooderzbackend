@@ -9,6 +9,7 @@ public interface CustomerService {
 		Customer addCustomer(Customer customer);
 		void deleteCustomer(int id);
 		List<Customer> getAllCustomers();
+		Customer getCustomerById(int id);
 		
 	
 }
