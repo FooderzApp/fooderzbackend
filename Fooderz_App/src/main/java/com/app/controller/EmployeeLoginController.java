@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.service.EmployeeLoginService;
 
-import io.swagger.annotations.Api;
-
-@Api(description = "Login operations for employee in the fooderz app")
+//@Api(description = "Login operations for employee in the fooderz app")
 @CrossOrigin
 @RestController
 public class EmployeeLoginController {
