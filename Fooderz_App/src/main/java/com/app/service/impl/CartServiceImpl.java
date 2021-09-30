@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.model.Cart;
+import com.app.model.Customer;
 import com.app.repository.CartRepository;
 import com.app.service.CartService;
 @Service
@@ -39,6 +40,14 @@ public class CartServiceImpl implements CartService {
 	public void DeleteCartById(int id) {
 		// TODO Auto-generated method stub
 		repository.deleteById(id);
+	}
+
+	@Override
+	public List<Cart> getCartByCustomerId(int customerId) {
+		// TODO Auto-generated method stub
+		Customer customer=new Customer();
+		customer.setCustomerId(customerId);
+		return repository.findCartByCustomer(customer);
 	}
 
 }
