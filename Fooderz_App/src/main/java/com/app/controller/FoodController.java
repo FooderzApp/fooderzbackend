@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.exception.ResourceNotFoundException;
 import com.app.model.Food;
+import com.app.repository.FoodRepository;
 import com.app.service.FoodService;
 
 import io.swagger.annotations.Api;
@@ -22,31 +24,32 @@ import io.swagger.annotations.Api;
 public class FoodController {
 
 	@Autowired
-	private FoodService service;
+	private FoodRepository repository;
 
 	@PostMapping("/food")
 	public Food addFood(@RequestBody Food food) {
 		// TODO Auto-generated method stub
-		return service.addFood(food);
+		return repository.save(food);
 	}
 
 	@DeleteMapping("/food/{id}")
 	public void deleteFood(@PathVariable int id) {
 		// TODO Auto-generated method stub
-		service.deleteFood(id);
+		Food existingFood=this.repository.findById(id).orElseThrow(()-> new ResourceNotFoundException("food with this id is not avaible" + id));
+		repository.delete(existingFood);
 
 	}
 
 	@GetMapping("/food")
 	public List<Food> getAllFoods() {
 		// TODO Auto-generated method stub
-		return service.getAllFoods();
+		return repository.findAll();
 	}
 
 	@GetMapping("/food/{id}")
 	public Food getFoodById(@PathVariable int id) {
 		// TODO Auto-generated method stub
-		return service.getFoodById(id);
+		return repository.findById(id).get();
 	}
 
 }

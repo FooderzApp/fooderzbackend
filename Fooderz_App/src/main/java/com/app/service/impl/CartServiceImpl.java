@@ -18,6 +18,7 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public Cart addFood(Cart cart) {
 		// TODO Auto-generated method stub
+	
 		return repository.save(cart);
 	}
 
@@ -30,7 +31,14 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public Cart getCartById(int id) {
 		// TODO Auto-generated method stub
+		
 		return repository.findById(id).get();
+	}
+
+	@Override
+	public void DeleteCartById(int id) {
+		// TODO Auto-generated method stub
+		repository.deleteById(id);
 	}
 
 }

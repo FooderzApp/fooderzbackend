@@ -9,4 +9,5 @@ public interface CartService {
 	public Cart addFood(Cart cart);
 	public List<Cart> getAllCart();
 	public Cart getCartById(int id);
+	public void DeleteCartById(int id);
 }

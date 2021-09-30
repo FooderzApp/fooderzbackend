@@ -2,6 +2,7 @@ package com.app.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,7 +14,7 @@ import lombok.Data;
 @Table
 public class Customer {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ApiModelProperty(notes = "this is the auto generated id for customer by the database ")
 	private int customerId;
 	@ApiModelProperty(notes = "this is for the customer first name")
@@ -25,8 +26,6 @@ public class Customer {
 	@ApiModelProperty(notes = "this is for the customer password")
 	private String password;
 
-//	@ApiModelProperty(notes = "this is the relationship between customer and food model class")
-//	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
-//	private List<Food> foodList;
+
 
 }
