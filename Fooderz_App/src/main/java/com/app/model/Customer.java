@@ -7,11 +7,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table
+@NoArgsConstructor
+@AllArgsConstructor
 public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +29,5 @@ public class Customer {
 	private String userName;
 	@ApiModelProperty(notes = "this is for the customer password")
 	private String password;
-
-
 
 }

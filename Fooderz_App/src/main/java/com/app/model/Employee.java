@@ -9,11 +9,15 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table
+@AllArgsConstructor
+@NoArgsConstructor
 public class Employee {
 	@Id
 	@GeneratedValue
