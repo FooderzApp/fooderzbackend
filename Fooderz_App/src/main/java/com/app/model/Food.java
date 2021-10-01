@@ -33,9 +33,9 @@ public class Food {
 	@Column(columnDefinition = "CLOB")
 	@ApiModelProperty(notes = "this is for the image of the food")
 	private String avatar;
-	@ManyToOne
-	@JoinColumn(name = "cart_fk")
-	private Cart cart;
+//	@ManyToOne
+//	@JoinColumn(name = "cart_fk")
+//	private Cart cart;
 
 
 

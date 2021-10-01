@@ -44,6 +44,12 @@ public class CartController{
 		// TODO Auto-generated method stub
 		service.DeleteCartById(id);
 	}
+
+	@GetMapping("/cart/customerId/{customerId}")
+	public List<Cart> getCartByCustomerId(int customerId) {
+		// TODO Auto-generated method stub
+		return service.getCartByCustomerId(customerId);
+	}
 	
 	
 	
