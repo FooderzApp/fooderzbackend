@@ -5,9 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import io.swagger.annotations.ApiModelProperty;
@@ -19,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 public class Food {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,23 +33,6 @@ public class Food {
 	@ApiModelProperty(notes = "this is for the image of the food")
 	private String avatar;
 
-	public Food(int foodId, String foodName, double price, String avatar) {
-		super();
-		this.foodId = foodId;
-		this.foodName = foodName;
-		this.price = price;
-		this.avatar = avatar;
-	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
 //	public Food(int foodId, String foodName, double price, String avatar) {
 //		super();
 //		this.foodId = foodId;
@@ -60,6 +41,13 @@ public class Food {
 //		this.avatar = avatar;
 //	}
 
+//	public Food(int foodId, String foodName, double price, String avatar) {
+//		super();
+//		this.foodId = foodId;
+//		this.foodName = foodName;
+//		this.price = price;
+//		this.avatar = avatar;
+//	}
 
 //	@ManyToOne
 //	@JoinColumn(name = "cart_fk")
