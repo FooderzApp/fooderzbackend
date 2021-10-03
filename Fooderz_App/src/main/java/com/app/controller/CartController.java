@@ -40,13 +40,13 @@ public class CartController{
 	}
 
 	@DeleteMapping("/cart/{id}")
-	public void DeleteCartById(int id) {
+	public void DeleteCartById(@PathVariable int id) {
 		// TODO Auto-generated method stub
 		service.DeleteCartById(id);
 	}
 
 	@GetMapping("/cart/customerId/{customerId}")
-	public List<Cart> getCartByCustomerId(int customerId) {
+	public List<Cart> getCartByCustomerId(@PathVariable int customerId) {
 		// TODO Auto-generated method stub
 		return service.getCartByCustomerId(customerId);
 	}
