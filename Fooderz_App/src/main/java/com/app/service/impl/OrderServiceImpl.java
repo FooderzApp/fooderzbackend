@@ -48,4 +48,10 @@ public class OrderServiceImpl implements OrderService {
 		return repository.findOrderByOrderStatus(orderStatus);
 	}
 
+	@Override
+	public void deleteOrderById(int id) {
+		// TODO Auto-generated method stub
+		 repository.deleteById(id);
+	}
+
 }

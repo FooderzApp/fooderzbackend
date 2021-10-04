@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,7 @@ import com.app.service.OrderService;
 
 @CrossOrigin
 @RestController
-public class OrderController {
+public class OrderController  {
 
 	@Autowired
 	private OrderService service;
@@ -44,5 +45,13 @@ public class OrderController {
 	@GetMapping("/employee/orderStatus/{orderStatus}")
 	public List<Order> getOrderByOrderStatus(@PathVariable String orderStatus) {
 		return service.getOrderByOrderStatus(orderStatus);
+	}
+
+
+	@DeleteMapping("/order/{id}")
+	public void deleteOrderById(@PathVariable int id) {
+		// TODO Auto-generated method stub
+		service.deleteOrderById(id);
+		
 	}
 }
