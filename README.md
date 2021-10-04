@@ -5,7 +5,7 @@
     Fooderzapp is based on online food managment system where the users can login/signup as an customer or employee where they can explore
     different features available .This application is very user friendly. Data stored in this application is secure.The customers can choose from
     variety of food items and add them to cart. An Employee can add the food items into the foodlist. Employees can also manage the deletion of food items,
-    they can also add food images and food names including price.
+    they can also add food images and food names including price.And also the customer can place the order as well
     
     --> Why use Fooderz?
     - This application has most updated features compared to existing applications.
